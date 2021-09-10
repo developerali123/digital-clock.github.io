@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(245, 17, 17);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 80px;
+        }
+        .container{
+            border: 10px solid black;
+        }
+        #time{
+            font-size: 60px;
+            padding:10px;
+            color: white;
+        }
+        #clock{
+            color:white;
+            font-size: 60px;
+            /* position: absolute;
+            top: 50%;
+            left: 35%; */
+            letter-spacing: 10px;
+            padding: 10px;
+        }
+        @media screen and (max-width:320px) {
+            #time,#clock{
+                font-size: 30px;
+                letter-spacing: 5px;
+            }            
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital clock</h1>
+    <div class="container">
+    <div id="time"></div>
+    <div id="clock"></div>
+    </div>
+    <script>
+        var time=new Date();
+        var x=time.toDateString();
+        document.getElementById("time").innerHTML=x;
+        function showdate(){
+        var date=new Date();
+        var hours=date.getHours();
+        var minutes=date.getMinutes();
+        var seconds=date.getSeconds();
+        var session="AM";
+        if(hours==0){
+            hours=12;
+        }
+        if(hours>12){
+            hours=hours-12;
+            session="PM";
+        }
+        if(hours<10){
+            hours="0"+hours;
+        }
+        if(minutes<10){
+            minutes="0"+minutes;
+        }
+        if(seconds<10){
+            seconds="0"+seconds;
+        }
+        document.getElementById("clock").innerHTML=hours+":"+minutes+":"+seconds+"  "+session;
+        setTimeout(showdate,1000);
+    }
+    showdate();
+    </script>
+</body>
+</html>
