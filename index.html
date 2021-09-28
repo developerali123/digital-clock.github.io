@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital clock</title>
     <style>
         body{
             background-color: rgb(245, 17, 17);
@@ -15,9 +15,14 @@
         }
         h1{
             font-size: 80px;
+            text-decoration: underline solid rgb(170, 12, 243);
+            text-align: center;
         }
         .container{
             border: 10px solid black;
+            border-radius: 10px;
+            background-color: grey;
+            box-shadow: 2px -2px 10px 5px blue;
         }
         #time{
             font-size: 60px;
@@ -27,16 +32,15 @@
         #clock{
             color:white;
             font-size: 60px;
-            /* position: absolute;
-            top: 50%;
-            left: 35%; */
             letter-spacing: 10px;
             padding: 10px;
+            text-align: center;
         }
-        @media screen and (max-width:320px) {
+        @media screen and (max-width:425px) {
             #time,#clock{
                 font-size: 30px;
                 letter-spacing: 5px;
+                text-align: left;
             }            
         }
     </style>
@@ -44,8 +48,8 @@
 <body>
     <h1>Digital clock</h1>
     <div class="container">
-    <div id="time"></div>
-    <div id="clock"></div>
+        <div id="time"></div>
+        <div id="clock"></div>
     </div>
     <script>
         var time=new Date();
