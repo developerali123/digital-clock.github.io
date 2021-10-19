@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital clock</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
         body{
             background-color: rgb(245, 17, 17);
             display: flex;
@@ -64,7 +69,7 @@
         if(hours==0){
             hours=12;
         }
-        if(hours>12){
+        if(hours>=12){
             hours=hours-12;
             session="PM";
         }
