@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(245, 17, 17);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 80px;
+    text-decoration: underline solid rgb(170, 12, 243);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.container{
+    border: 10px solid black;
+    border-radius: 10px;
+    background-color: grey;
+    box-shadow: 2px -2px 10px 5px blue;
+}
+#time{
+    font-size: 60px;
+    padding:10px;
+    color: white;
+}
+#clock{
+    color:white;
+    font-size: 60px;
+    letter-spacing: 10px;
+    padding: 10px;
+    text-align: center;
+}
+@media screen and (max-width:425px) {
+    #time,#clock{
+        font-size: 30px;
+        letter-spacing: 5px;
+        text-align: left;
+    }       
+    h1{
+        font-size: 60px;
+    }     
+}
